@@ -45,6 +45,6 @@ export function getRagConfig(): RagConfig {
     neo4jUri: required.NEO4J_URI!,
     neo4jUsername: required.NEO4J_USERNAME!,
     neo4jPassword: required.NEO4J_PASSWORD!,
-    neo4jDatabase: process.env.NEO4J_DATABASE || 'neo4j',
+    neo4jDatabase: process.env.NEO4J_DATABASE?.trim() || 'neo4j',
   };
 }
